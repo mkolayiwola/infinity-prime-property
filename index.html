@@ -55,6 +55,10 @@
       margin-bottom: 16px;
     }
 
+    .hero .eyebrow {
+      margin-top: 40px;
+    }
+
     .btn-gold {
       display: inline-block;
       background: var(--gold);
@@ -733,33 +737,27 @@
     document.getElementById('footer-copy').textContent =
       '\u00A9 ' + new Date().getFullYear() + ' Infinity Prime Property Limited. All rights reserved.';
 
-    function revealOnScroll() {
-      var reveals = document.querySelectorAll('.reveal');
-      var windowHeight = window.innerHeight;
-      reveals.forEach(function(el) {
-        if (el.getBoundingClientRect().top < windowHeight - 50) {
-          el.classList.add('active');
+    // Intersection Observer for scroll-triggered animations
+    var observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
         }
       });
-    }
-    window.addEventListener('DOMContentLoaded', revealOnScroll);
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('resize', revealOnScroll);
+    }, observerOptions);
 
-    /* Safety net: on some viewports (mobile address-bar resize, fast
-       scroll, orientation change) an element's bounding box can skip
-       past the scroll-check threshold between ticks and never receive
-       the .active class, leaving it permanently invisible (opacity:0).
-       This guarantees every .reveal element is shown shortly after
-       load and after the page has had time to settle, regardless of
-       device or viewport. */
-    function forceRevealAll() {
-      document.querySelectorAll('.reveal').forEach(function(el) {
-        el.classList.add('active');
+    // Observe all .reveal elements
+    document.addEventListener('DOMContentLoaded', function() {
+      var reveals = document.querySelectorAll('.reveal');
+      reveals.forEach(function(el) {
+        observer.observe(el);
       });
-    }
-    window.addEventListener('load', forceRevealAll);
-    setTimeout(forceRevealAll, 1200);
+    });
 
     var navToggle = document.getElementById('navToggle');
     var navLinks  = document.getElementById('navLinks');
