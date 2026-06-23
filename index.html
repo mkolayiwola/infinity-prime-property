@@ -200,29 +200,28 @@
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
-      padding: 210px 48px 110px;
+      padding: 80px 48px;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
 
     .hero-rule {
-      position: absolute;
-      left: 48px;
-      top: 210px;
-      bottom: 110px;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--gold), transparent);
+      display: none;
     }
 
-    .hero-content { max-width: 640px; padding-left: 28px; position: relative; }
+    .hero-content { max-width: 640px; position: relative; text-align: center; }
 
     .hero h1 { color: var(--white); font-weight: 800; font-size: 46px; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 24px; }
     .hero h1 .gold { color: var(--gold); }
 
-    .hero-sub { color: rgba(255,255,255,0.85); font-size: 14px; line-height: 2; margin-bottom: 40px; max-width: 480px; }
+    .hero-sub { color: rgba(255,255,255,0.85); font-size: 14px; line-height: 2; margin-bottom: 40px; max-width: 480px; margin-left: auto; margin-right: auto; }
 
-    .hero-ctas { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 56px; }
+    .hero-ctas { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 56px; justify-content: center; }
 
-    .hero-pillars { display: flex; border-top: 1px solid rgba(184,155,90,0.3); padding-top: 36px; }
+    .hero-pillars { display: flex; border-top: 1px solid rgba(184,155,90,0.3); padding-top: 36px; justify-content: center; }
     .pillar { flex: 1; padding-right: 28px; border-right: 1px solid rgba(184,155,90,0.2); }
     .pillar + .pillar { padding-left: 28px; }
     .pillar:last-child { border-right: none; }
@@ -421,9 +420,9 @@
       .nav-cta-wrapper { margin-left: 0; margin-top: 4px; }
       .nav-cta-btn { display: block; text-align: center; padding: 13px 20px; }
 
-      .hero { padding: 140px 24px 64px; }
-      .hero-rule { left: 24px; top: 140px; bottom: 64px; }
-      .hero-content { padding-left: 20px; max-width: 100%; }
+      .hero { padding: 80px 24px; }
+      .hero-rule { display: none; }
+      .hero-content { max-width: 100%; }
       .hero h1 { font-size: 30px; }
       .hero-pillars { flex-direction: column; gap: 24px; }
       .pillar { border-right: none; padding: 0 !important; }
