@@ -56,57 +56,63 @@
     }
 
     .hero .eyebrow {
-      margin-top: 40px;
+      margin-top: 60px;
     }
 
     .btn-gold {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       background: var(--gold);
       color: var(--green);
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       border: none;
-      padding: 16px 32px;
+      padding: 16px 40px;
       cursor: pointer;
       text-decoration: none;
       transition: background 0.2s, color 0.2s;
+      min-height: 48px;
     }
     .btn-gold:hover { background: var(--bronze); color: var(--white); }
 
     .btn-ghost {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       background: transparent;
       color: var(--white);
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       border: 1.5px solid var(--white);
-      padding: 14px 28px;
+      padding: 14px 36px;
       cursor: pointer;
       text-decoration: none;
       transition: background 0.2s, color 0.2s;
+      min-height: 48px;
     }
     .btn-ghost:hover { background: var(--white); color: var(--green); }
 
     .btn-ghost-dark {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       background: transparent;
       color: var(--green);
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       border: 1.5px solid var(--green);
-      padding: 14px 28px;
+      padding: 14px 36px;
       cursor: pointer;
       text-decoration: none;
       transition: background 0.2s, color 0.2s;
+      min-height: 48px;
     }
     .btn-ghost-dark:hover { background: var(--green); color: var(--white); }
 
@@ -204,7 +210,7 @@
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
-      padding: 80px 48px;
+      padding: 100px 48px;
       position: relative;
       display: flex;
       align-items: center;
@@ -216,21 +222,19 @@
       display: none;
     }
 
-    .hero-content { max-width: 640px; position: relative; text-align: center; }
+    .hero-content { max-width: 700px; position: relative; text-align: center; }
 
-    .hero h1 { color: var(--white); font-weight: 800; font-size: 46px; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 24px; }
-    .hero h1 .gold { color: var(--gold); }
+    .hero h1 { color: var(--white); font-weight: 800; font-size: 64px; line-height: 1.15; letter-spacing: -0.02em; margin-top: 40px; margin-bottom: 32px; }
+    .hero h1 .gold { color: var(--gold); font-weight: 700; }
 
-    .hero-sub { color: rgba(255,255,255,0.85); font-size: 14px; line-height: 2; margin-bottom: 40px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .hero-sub { color: rgba(255,255,255,0.85); font-size: 16px; line-height: 1.8; margin-bottom: 48px; max-width: 520px; margin-left: auto; margin-right: auto; }
 
-    .hero-ctas { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 56px; justify-content: center; }
+    .hero-ctas { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 64px; justify-content: center; }
 
-    .hero-pillars { display: flex; border-top: 1px solid rgba(184,155,90,0.3); padding-top: 36px; justify-content: center; }
-    .pillar { flex: 1; padding-right: 28px; border-right: 1px solid rgba(184,155,90,0.2); }
-    .pillar + .pillar { padding-left: 28px; }
-    .pillar:last-child { border-right: none; }
-    .pillar-title { color: var(--gold); font-weight: 700; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
-    .pillar-desc { color: rgba(255,255,255,0.75); font-size: 10px; line-height: 1.8; }
+    .hero-pillars { display: flex; border-top: 1px solid rgba(184,155,90,0.3); padding-top: 48px; gap: 40px; justify-content: center; }
+    .pillar { flex: 1; max-width: 200px; }
+    .pillar-title { color: var(--gold); font-weight: 700; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
+    .pillar-desc { color: rgba(255,255,255,0.75); font-size: 12px; line-height: 1.7; }
 
     /* ── SECTIONS ── */
     .section-cream { background: var(--cream); padding: 88px 48px; }
@@ -424,12 +428,16 @@
       .nav-cta-wrapper { margin-left: 0; margin-top: 4px; }
       .nav-cta-btn { display: block; text-align: center; padding: 13px 20px; }
 
-      .hero { padding: 80px 24px; }
+      .hero { padding: 100px 20px 80px; }
       .hero-rule { display: none; }
       .hero-content { max-width: 100%; }
-      .hero h1 { font-size: 30px; }
-      .hero-pillars { flex-direction: column; gap: 24px; }
-      .pillar { border-right: none; padding: 0 !important; }
+      .hero .eyebrow { margin-top: 40px; }
+      .hero h1 { font-size: 42px; margin-top: 30px; margin-bottom: 24px; }
+      .hero-sub { font-size: 15px; margin-bottom: 40px; }
+      .hero-ctas { gap: 16px; flex-direction: column; align-items: stretch; margin-bottom: 56px; }
+      .btn-gold, .btn-ghost { width: 100%; }
+      .hero-pillars { flex-direction: column; gap: 32px; padding-top: 40px; }
+      .pillar { max-width: none; }
 
       .section-cream, .section-white, .section-green { padding: 64px 24px; }
 
@@ -455,8 +463,16 @@
     }
 
     @media (max-width: 480px) {
-      .hero h1 { font-size: 26px; }
-      .hero-ctas { flex-direction: column; align-items: flex-start; }
+      .hero { padding: 80px 16px 60px; }
+      .hero .eyebrow { margin-top: 30px; font-size: 9px; }
+      .hero h1 { font-size: 36px; margin-top: 24px; margin-bottom: 20px; line-height: 1.2; }
+      .hero-sub { font-size: 14px; line-height: 1.7; margin-bottom: 32px; }
+      .hero-ctas { flex-direction: column; align-items: stretch; gap: 12px; margin-bottom: 48px; }
+      .btn-gold, .btn-ghost { width: 100%; justify-content: center; padding: 14px 20px; min-height: 44px; font-size: 11px; }
+      .hero-pillars { gap: 24px; padding-top: 32px; }
+      .pillar { max-width: none; }
+      .pillar-title { font-size: 10px; margin-bottom: 8px; }
+      .pillar-desc { font-size: 11px; }
       .audience-grid { grid-template-columns: 1fr; }
       .audience-card-img { height: 220px; }
       .card-grid-2 { grid-template-columns: 1fr; }
